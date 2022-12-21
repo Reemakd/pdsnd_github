@@ -101,18 +101,18 @@ def time_stats(df):
     # display the most common month
 
     common_month = df['month'].mode()[0]
-    print('The most common month is ', common_month)
+    print('The most common month is: ', common_month)
 
     # display the most common day of week
 
     common_day = df['day_of_week'].mode()[0]
-    print('The most common day is ', common_day)
+    print('The most common day is: ', common_day)
 
     # display the most common start hour
 
     df['hour'] = df['Start Time'].dt.hour
     common_start_hour = df['hour'].mode()[0]
-    print('The most common start hour is ', common_start_hour)
+    print('The most common start hour is: ', common_start_hour)
 
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
@@ -127,12 +127,12 @@ def station_stats(df):
     # display most commonly used start station
 
     common_start_station = df['Start Station'].value_counts().idxmax()
-    print('The most commonly used start station is ', common_start_station, '\n')
+    print('The most commonly used start station is: ', common_start_station, '\n')
 
     # display most commonly used end station
 
     common_end_station = df['End Station'].value_counts().idxmax()
-    print('The most commonly used end station is ', common_end_station, '\n')
+    print('The most commonly used end station is: ', common_end_station, '\n')
 
     # display most frequent combination of start station and end station trip
 
@@ -172,15 +172,15 @@ def user_stats(df):
     # Display counts of user types
 
     user_types = df['User Type'].value_counts()
-    print('The counts of user types are... ', user_types, '\n')
+    print('The counts of user types are: ', user_types, '\n')
 
     # Display counts of gender
 
     try:
         gender_counts = df['Gender'].value_counts()
-        print('The counts of gender are... ', gender_counts, '\n')
+        print('The counts of gender are: ', gender_counts, '\n')
     except KeyError:
-        print('The counts of gender are... there is no data\n')
+        print('The counts of gender are: there is no data\n')
 
     # Display earliest, most recent, and most common year of birth
 
@@ -220,7 +220,8 @@ def project_name():
 
 
 def print_info():
-    print("proggraming for data science nanodegree")
+    print("proggraming for data science nanodegree\n")
+    print("Udacity")
 
 
 def main():
