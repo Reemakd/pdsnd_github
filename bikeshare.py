@@ -219,6 +219,10 @@ def project_name():
     print("bikeshare")
 
 
+def print_info():
+    print("proggraming for data science nanodegree")
+
+
 def main():
     while True:
         city, month, day = get_filters()
